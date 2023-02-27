@@ -35,7 +35,7 @@ const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
           <span className="ms-2 text-muted ">{formatCurrency(price)}</span>
         </Card.Title>
         <div className="mt-auto">
-          {quantity === null ? (
+          {quantity === 0 ? (
             <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
               + ADD TO CART
             </Button>
